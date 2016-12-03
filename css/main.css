@@ -6,7 +6,10 @@
 	padding: 0;
 }
 body{
-	background-image: url(/img/surrogateRingsNoGlitch-600x377.gif);
+	background-image: url(/img/3840x2160-misc_lord_of_the_rings_middle_earth_map-24533.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 /* Navigation */
@@ -42,7 +45,7 @@ nav .more-info{
 
 
 /* More Info */
-#more-info{
+#about{
 	display: none;
 	padding: 10px;
 	border: 1px solid #fff;

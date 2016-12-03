@@ -2,7 +2,8 @@ $(document).ready(function (e) {
 	"use strict";
 	
 	$(".more-info a").click(function () {
-     $("#more-info").toggleClass("display", "block");
+     $("#about").css("display", "block");
+			$("#info-close").css("display", "none");
    });
 	
 	var name, race, className;
