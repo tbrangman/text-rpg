@@ -8,7 +8,7 @@
 body{
 	background-image: url(/img/3840x2160-misc_lord_of_the_rings_middle_earth_map-24533.jpg);
 	background-position: center;
-	background-size: cover;
+	background-size: auto;
 	background-repeat: no-repeat;
 }
 
@@ -43,6 +43,29 @@ nav .more-info{
 	text-align: right;
 }
 
+/* Blinking Cursor */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 
 /* More Info */
 #about{
@@ -51,12 +74,50 @@ nav .more-info{
 	border: 1px solid #fff;
 	color: #fff;
 }
+#about #info-close{
+	text-align: center;
+	margin: 0 auto;
+	width: 20%;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px;
+	border: 1px solid #fff;
+}
+#about #info-close:hover{
+	color: #333;
+	background-color: #fff;
+}
 
 /* Content */
 #content{
 	padding: 50px 0;
 	text-align: center;
 	color: #fff;
+}
+#content h2{
+	overflow: hidden;
+	margin: 0 auto;
+	animation: 
+		typewriter 3.5s steps(100, end);
+}
+@keyframes typing{
+	from {width: 0 }
+	to { width: 100% }
+}
+
+#proceed-btn{
+	position: absolute;
+	text-align: center;
+	margin: 0px auto;
+	width: 20%;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+	border: 1px solid #fff;
+}
+#proceed-btn:hover{
+	color: #333;
+	background-color: #fff;
 }
 #content .race-choices{
 	border-radius: 0;
@@ -104,6 +165,8 @@ nav .more-info{
 
 /* Footer */
 footer{
+	position: absolute;
+	bottom: 0;
 	margin: 20px 0;
 	width: 100%;
 	padding: 10px 0;
