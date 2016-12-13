@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Journey</title>
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link  rel="stylesheet" type="text/css" href="css/simple-grid.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+	<script src="js/game.js" type="text/javascript"></script>
+	<script src="js/typed.js"></script>
+</head>
+
+<body>
+	<nav>
+		<div class="container">
+			<div class="col-6-sm logo">
+				<a href="#">The Journey.</a>
+			</div>
+			<div class="col-6-sm more-info">
+				<a href="#">more info</a>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<section id="about">
+				<p>The Journey is a text-based rpg game made by Tyler Brangman and Matt Basham for CGT 353: Principles of Interactive and Dynamic Media class. Your character is stuck in a strange location, you must help him escape safely. Different decisions bring different consequences, so choose wisely. Have fun!</p>
+				<br>
+				<a id="info-close" href="#">Close</a>
+		</section>
+
+		<div id="console">
+			<!-- Death/Redo -->
+			<div id="wingame" style="display:none;">
+			<p>You escaped with your life! Congratulations!</p>
+			<p class="link"><a href="console.html" style="color: white;">Play again</a>
+			</div>
+
+			<div id="eatPoison" style="display:none;">
+			<p>Well, this is awkward. You played yourself. Congrats on eating poison.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>
+
+			<div id="killMace" style="display:none;">
+			<p>Duh, you dropped the mace in the basement. You're out here swinging blindly. You end up dying a very gruesome death.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>
+
+			<div id="takeRedOrb" style="display:none;">
+			<p>You picked the wrong orb. Sorry buddy, but it looks like you killed yourself.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>
+
+			<div id="takeBlueOrb" style="display:none;">
+			<p>You picked the wrong orb. Sorry buddy, but it looks like you killed yourself.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>  
+
+			<div id="takeGreenOrb" style="display:none;">
+			<p>Congratulations you picked the right orb.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>                          
+
+			<div id="trap" style="display:none;">
+			<p>You open the door and proceed inside. The door shuts and the floor slowly parts ways revealing spikes below. You are dead.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>
+
+			<div id="killGhoul" style="display:none;">
+			<p>Obviously the object you used won't kill the ghoul. Maybe you should use something more "deadly" next time. You are dead.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>
+
+			<div id="killHiddenFigure" style="display:none;">
+			<p>Obviously the object you used won't kill the hidden figure. Maybe you should use something more "deadly" next time. You are dead.</p>
+			<p class="link"><a href="console.html" style="color: white;"> --> Start Over</a>
+			</div>
+
+			<!-- Plot line of text-rpg game -->
+			<p id="message_startgame">
+            	You wake up in a frenzy and find yourself in a strange cellar with a door. <br>You try to recall why you're here, but cannot. <br>Anxious, you look right and left. You see a hallway in front of you with a locked door.<br>What do you do?<br>You should <span style="color: yellow;">look right</span> and <span style="color: yellow;">look left</span>..<br>Type "help" for a list of commands<br>
+            </p>
+           <p id="message_hallway" style="display:none;">
+            	You proceed toward the hallway. You stop, a hidden figure lurks past the entrance and fails to notice you. Being the only way out of the room you test your luck and enter into the hallway. The hallway is filled with majestic paintings and cobwebs. Yuck! You continue down the hall and see a bookshelf. You notice an out of place book. 
+            </p> 
+            <p id="message_stairwell" style="display:none;">
+            	The bookshelf opens and a set of stairs opens to a room below. Wow, it looks dark down there. You go downstairs anyway and reach a wall with two doors. One door has a red marker and the other has a blue marker. Try going to one of the doors.
+            </p> 
+             <p id="message_basement" style="display:none;">
+            	You proceed to the basement. Wow, it smells awful down here. You hear a loud groan. "Wtf is that". You hear a voice from one of the walls. "Today we are going to test your strength and prowess. You will fight my ghoul. Pick up the mace and fight to the death." The ghoul charges toward you. 
+            </p> 
+            <p id="message_basement2" style="display:none;">
+            	That's a mighty fine mace you have there. What are you going do with it? 
+            </p> 
+            <p id="message_basement3" style="display:none;">
+            	Well done. You drop the mace and look in anguish at what has happened. It looks like you're a stone cold killing machine. You observe the map of the house. A target is marked on the map...the kitchen. You've worked up quite a sweat, time for a snack, eh? 
+            </p> 
+            <p id="message_kitchen" style="display:none;">
+            	You enter the kitchen. Being the hungry person you are you open the refrigerator and you see three delicious foods. Apple, steak, or pizza. You're low on energy, so don't dillydally. Pick a food to eat.
+            </p> 
+            <p id="message_livingroom" style="display:none;">
+            	You hear a noise from the living room. Strange. You go into the living room and see three pillars. The top of the pillars contain strange orbs: red, green. blue. I wonder what will happen if I take one.
+            </p> 
+            <p id="message_hiddenroom" style="display:none;">
+            	A strange room opens and you make your way into it. You see a hidden figure. Must be a boss fight right? You remembered that you dropped the mace in the basement. Crap. Luckily, the gods are on your side and you spot a dagger in one of the corners. 
+            </p>
+            <p id="message_hiddenroom1" style="display:none;">
+            	You grab the dagger and prepare to square up. Your fist clinched and eyes focused, you should probably kill the thing. Let's jump to conclusions, huh?
+            </p>
+            <p id="message_hiddenroom2" style="display:none;">
+            	The hidden figure dodges every hit. What is this The Matrix? The hidden figure disarms you and throws you to the ground. As you fall, the green orb falls out of your pocket and the hidden figure steps back. Looks like he doesn't like the color green. You shine the orb in his direction and he evaporates. Wow, that was easy. You see a button on the wall and press it. You hear a loud click...sounds like the front door. You escape with your life. Congratulations. 
+            </p>  
+			<p id="message_help" style="display:none;">
+            	---------------------------------------------------------------------- <br>
+            	Here is a list of commands:<br>
+            	<u>look</u> (direction) | look in that direction<br>
+            	<u>inventory</u> | lists everything you are currently carrying<br>
+				<u>take</u> (object) | takes the specified object and puts it in your inventory<br>
+				<u>unlock</u> (object) | unlocks door with the object you specify<br>
+				<u>go to</u> thing (direction) | go to that direction<br>
+				<u>kill</u> (thing) with (object) | kill thing with the object you specify<br>
+				<u>eat</u> (object) | eat object<br>
+                ---------------------------------------------------------------------- <br>
+			</p>
+			
+			<!-- Placeholder this is where everthing will be inserted before -->
+			
+		<div id="placeholder"></div>
+			<form onsubmit="return false;">
+				<input id="command_line" type="text" size="50" autofocus="autofocus" autocomplete="off">
+			</form>
+		</div>
+	</div>
+	
+	<!-- <footer>
+			<div class="container">
+				<p>Text RPG &copy; 2016</p>
+			</div>
+	</footer> -->
+</body>	
+</html>

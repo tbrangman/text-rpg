@@ -10,11 +10,4 @@ $(document).ready(function (e) {
 		$("#about").css("display", "none");
 		$("#info-close").css("display", "none");
    });
-	
-	function NameofThanos() {
-		var x = document.getElementById("name-box").value;
-		document.getElementById("display-name").innerHTML = x;
-	}
-	
-	var name, race, className;
 });

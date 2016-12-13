@@ -1,12 +1,13 @@
 /* Global Styles */
 *{
 	cursor: crosshair;
-	font-family: 'Josefin Slab', serif;
+	font-family: 'Rokkitt', serif;
 	margin: 0;
 	padding: 0;
 }
 body{
-	background-image: url(/img/3840x2160-misc_lord_of_the_rings_middle_earth_map-24533.jpg);
+	/* background-image: url(../img/bg.jpg); */
+	background-color: #333;
 	background-position: center;
 	background-size: auto;
 	background-repeat: no-repeat;
@@ -20,14 +21,16 @@ nav{
 	display: flex;
 }
 nav a{
+	font-weight: 700;
+	font-size: 20px;
 	color: #ffffff;
 	text-decoration: none;
 }
 nav a:hover{
-	text-decoration: overline;
+	text-decoration: underline;
 }
 nav p{
-	font-size: 16px;
+	font-weight: 700;
 	padding: 10px;
 }
 nav div{
@@ -69,9 +72,9 @@ nav .more-info{
 
 /* More Info */
 #about{
+	border: 2px solid #fff;
 	display: none;
 	padding: 10px;
-	border: 1px solid #fff;
 	color: #fff;
 }
 #about #info-close{
@@ -85,7 +88,7 @@ nav .more-info{
 }
 #about #info-close:hover{
 	color: #333;
-	background-color: #fff;
+	background-color: #FFF;
 }
 
 /* Content */
@@ -106,60 +109,51 @@ nav .more-info{
 }
 
 #proceed-btn{
-	position: absolute;
+	position: fixed;
 	text-align: center;
-	margin: 0px auto;
 	width: 20%;
+	left: 40%;
 	text-decoration: none;
 	color: #fff;
 	padding: 10px;
 	border: 1px solid #fff;
+	bottom: 20%;
 }
 #proceed-btn:hover{
 	color: #333;
 	background-color: #fff;
 }
-#content .race-choices{
-	border-radius: 0;
-	border: none;
+
+/* Console */
+#console{
+	font-weight: 400;
+	height: 600px;
+	width: 90%;
+	margin: 0 auto;
+	overflow: auto;
+	border-radius: 10px;
+	text-align: left;
 	padding: 10px;
-	font-size: 16px;
+	/* background-color: rgba(149, 165, 166, 0.7); */
 	color: #fff;
-	border: 2px solid #fff;
-	background-color: transparent
 }
-#answer-box{
-	color: #fff;
-	margin: 30px 0;
+
+#console p{
+	font-size: 20px;
+	padding: 10px 100px;
 }
-#answer-box input{
-	margin: 10px;
-}
-#answer-box .answer{
+#console input{
 	display: inline-block;
-	text-align: center;
-	border: 2px solid #fff;
-	color: #fff;
-	background-color: transparent;
-	font-size: 16px;
-	padding: 10px;
-	width: 50%;
 }
-#answer-box input{
-	text-align: center;
-	border: 2px solid #fff;
-	color: #fff;
-	background-color: transparent;
-	font-size: 16px;
-	width: 50%;
-	padding: 10px 20px;
+#console form{
+	margin: 0 auto;
+	width: 500px;
+	display: block;
+	margin-top: 0em;
 }
-#answer-box .submit:hover{
-	text-align: center;
-	color: #333;
-	background-color: #fff;
+#console #command_line{
 	font-size: 16px;
-	padding: 10px 20px;
+	padding: 5px;
 }
 
 
